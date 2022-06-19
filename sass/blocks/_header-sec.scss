@@ -1,0 +1,207 @@
+.header-sec {
+    background-color: #000000;
+    .container {
+        padding: 0 7px;
+    }
+}
+.header-title {
+    color: #f5c518;
+    padding: 15px 0 5px;
+    font-size: 40px;
+    font-family: 'Roboto-medium';
+}
+.btns-group {
+    padding: 10px 0;
+}
+.header-btn {
+    padding: 7px 10px;
+    background-color: transparent;
+    border: none;
+    color: #73797d;
+    text-transform: uppercase;
+    font-family: 'Roboto-medium', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    border-bottom: 3px solid transparent;
+}
+.header-btn.active {
+    // border-bottom: 3px solid #f5c518;
+    color: #fff;
+    // animation-name: headerBtn;
+    // animation-duration: 0.3s;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 3px;
+        background-color: #f5c518;
+        animation-name: headerBtn;
+        animation-duration: 0.3s;
+        animation-timing-function: ease;
+    }
+}
+@keyframes headerBtn {
+    from {
+        opacity: 0.1;
+        // transform: translateY(150%);
+        bottom: -10%;
+    }
+    to {
+        opacity: 1;
+        // transform: translateY(100%);
+        bottom: 0;
+    }
+}
+.tab-containers {
+    height: 2400px;
+}
+.tabs {
+    color: #fff;
+    display: none;
+}
+.tabs.active {
+    display: flex;
+    animation-name: tabD_Block;
+    animation-duration: 0.5s;
+    opacity: 1;   
+}
+@keyframes tabD_Block {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// Trailers Content
+.trailers {
+    width: 100%;
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.trailer-box {
+    background-color: #1a1a1a;
+    width: 180px;
+    height: 340px;
+    margin: 25px 10px 25px;
+    border-radius: 0px 0px 5px 5px;
+    overflow: hidden;
+    transition: 0.3s;
+    &:hover {
+        text-decoration: none;
+        transform: scale(1.01);
+        box-shadow: 0px 0px 5px white;
+        .play-ic-box::after {
+            transform: scale(4);
+            opacity: 1;
+        }
+        .fa-circle-play.playichover {
+            transform: scale(1) translate(-50%, -50%);
+            opacity: 1;
+        }
+        .fa-circle-play.playtime {
+            display: none;
+        }
+        .play-time {
+            display: none;
+        }
+    }
+}
+.img-box {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+.play-ic-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    color: #fff;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        top: 100%;
+        left: 0;
+        border-radius: 50%;
+        background-color: #f5c518;
+        transition: 0.7s all;
+        opacity: 0;
+    }
+    
+}
+.fa-circle-play.playichover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    font-size: 30px;
+    color: #000000;
+    z-index: 99;
+    transition: 0.7s all;
+    opacity: 0;
+}
+.fa-circle-play.playtime {
+    font-size: 25px;
+    margin-right: 8px;
+}
+.trailer-img {
+    width: 100%;
+    height: fit-content;
+}
+
+.trailer-data {
+    width: 100%;
+    height: calc(100% - 240px);
+    // background-color: green;
+    padding: 5px 14px 0px;
+}
+.trailer-name-eng,
+.trailer-name-rus,
+.trailer-janr {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #6c7f84;
+    line-height: 20px;
+}
+.trailer-name-rus {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+// EMPTY BOX
+.empty-box {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+    padding: 80px 0;
+}
+.empty-box-title {
+    text-transform: uppercase;
+    font-family: monospace;
+    letter-spacing: 2px;
+
+}
+.empty-box-img {
+    width: 30%;
+    height: auto;
+}
