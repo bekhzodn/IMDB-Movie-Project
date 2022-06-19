@@ -25,10 +25,7 @@
     border-bottom: 3px solid transparent;
 }
 .header-btn.active {
-    // border-bottom: 3px solid #f5c518;
     color: #fff;
-    // animation-name: headerBtn;
-    // animation-duration: 0.3s;
     position: relative;
     &::after {
         content: '';
@@ -46,12 +43,10 @@
 @keyframes headerBtn {
     from {
         opacity: 0.1;
-        // transform: translateY(150%);
         bottom: -10%;
     }
     to {
         opacity: 1;
-        // transform: translateY(100%);
         bottom: 0;
     }
 }
@@ -80,7 +75,6 @@
 // Trailers Content
 .trailers {
     width: 100%;
-    // display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -169,7 +163,6 @@
 .trailer-data {
     width: 100%;
     height: calc(100% - 240px);
-    // background-color: green;
     padding: 5px 14px 0px;
 }
 .trailer-name-eng,
